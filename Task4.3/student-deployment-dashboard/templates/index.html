@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{{ application }}</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>{{ application }}</h1>
+
+    <p class="subtitle">
+        Docker-based application deployment demonstration
+    </p>
+
+    <div class="dashboard">
+
+        <div class="card">
+            <h3>Application</h3>
+            <p>{{ application }}</p>
+        </div>
+
+        <div class="card">
+            <h3>Version</h3>
+            <p>{{ version }}</p>
+        </div>
+
+        <div class="card">
+            <h3>Environment</h3>
+            <p>{{ environment }}</p>
+        </div>
+
+        <div class="card">
+            <h3>Container Status</h3>
+            <p>{{ container_status }}</p>
+        </div>
+
+        <div class="card">
+            <h3>Deployment</h3>
+            <p>{{ deployment_platform }}</p>
+        </div>
+
+    </div>
+
+    <div class="status">
+        Application is running successfully inside Docker.
+    </div>
+
+</div>
+
+</body>
+</html>
